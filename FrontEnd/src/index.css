@@ -12,6 +12,7 @@
 /* custom color  */
 
 @theme {
+  --color-theme-submit-btn: #006b75;
   --color-theme-blue: #7FCBC1;
   --color-theme-white: #fff;
   --color-theme-btnwhite: #FFF9F9;
@@ -23,6 +24,9 @@
   --color-theme-border-slate: #EBEFEE;
   --color-theme-setting-green: #EFF9F8;
   --font-poppins: "Poppins", sans-serif;
+  --color-theme-login-blue: #026A75;
+  --color-theme-fade:#908F8F;
+  
   --color-gradient-footer: linear-gradient(180deg, #262424 0%, #373232 100%);
 
 }
