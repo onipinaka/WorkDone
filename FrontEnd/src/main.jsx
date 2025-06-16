@@ -5,10 +5,10 @@ import LandingPage from './Pages/LandingPage/LandingPage'
 import Login from './components/login/Login'
 import ContactForm from './components/ContactUs/ContactForm'
 import GetinTouch from './components/ContactUs/GetinTouch'
-import ContactUs from './Pages/LandingPage/ContactUs'
+import SignUp from './Pages/SignUp/SignUp'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <ContactUs/>
+    <SignUp/>
   </StrictMode>,
 )

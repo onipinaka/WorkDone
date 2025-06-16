@@ -1,6 +1,8 @@
 import React from 'react'
+import SecButton from '../Button/SecButton'
 
 function ContactForm() {
+    const name = "Send Messsage";
   return (
     <div className='pt-[21px] pb-[21px] w-[348px] h-auto border-4 bg-white border-theme-border-slate border-solid rounded-[20px]'>
         <div >
@@ -15,7 +17,7 @@ function ContactForm() {
                 </div>
                 <div className='mt-[47px] flex justify-center items-center relative'>
                     <img className='absolute top-0 left-2 transform -translate-y-7' src="/contactus/bird.svg" alt="" />
-                    <button className='w-[300px] h-[52px] rounded-[20px] bg-theme-submit-btn' type="submit">Send Message</button>
+                    <SecButton name={name}/>
                 </div>
             </form>
         </div>
