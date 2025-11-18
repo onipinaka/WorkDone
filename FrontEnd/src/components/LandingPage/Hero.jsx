@@ -11,7 +11,7 @@ const TagsItem = [
 
 const Hero = () => {
   return (
-    <div className='w-full flex justif'>
+    <div className='w-full flex justify-center'>
         <div className='w-[90vw] flex flex-col bg-theme-blue pt-6 px-2.5 gap-y-2.5 
         rounded-[20px] my-5'>
             <div>

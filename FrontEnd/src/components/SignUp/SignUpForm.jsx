@@ -1,6 +1,7 @@
 import React from 'react'
 import LogUpbtn from '../Button/LogUpbtn'
 import SecButton from '../Button/SecButton'
+import { Link } from 'react-router-dom'
 
 function SignUpForm() {
   const name = "Sign Up"
@@ -30,13 +31,16 @@ function SignUpForm() {
         <form action="">
             <div className='mt-5 flex flex-col justify-center items-center gap-y-6'>
               {
-                signupField.map((item)=>(
-                  <LogUpbtn placeholder={item.placeholder} icon={item.svg}/>
+                signupField.map((item, index)=>(
+                  <LogUpbtn key={index} placeholder={item.placeholder} icon={item.svg}/>
                 ))
               }
               <div className='mt-6 mb-5'>
                 <SecButton name={name}/>
-                <p className='text-[10px] text-[#9CA3AF] text-center mt-5 font-poppins font-medium'>Already have an account?<span className='text-[#006B72] text-[12px] font-medium ' >Login</span></p>
+                <p className='text-[10px] text-[#9CA3AF] text-center mt-5 font-poppins font-medium'>
+                  Already have an account? 
+                  <Link to="/signin" className='text-[#006B72] text-[12px] pl-1 font-medium'>Login</Link>
+                </p>
               </div>
               
             </div>

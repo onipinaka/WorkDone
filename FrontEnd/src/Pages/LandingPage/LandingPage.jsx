@@ -8,11 +8,11 @@ import Footer from '../../components/Footer/Footer'
 
 function LandingPage() {
   return (
-    <div className=''>
-      <Header/>
+    <div className='w-full max-w-screen-sm'>
+      
       <Hero/>
       <Ordersection/>
-      <Footer/>
+      
     </div>
   )
 }

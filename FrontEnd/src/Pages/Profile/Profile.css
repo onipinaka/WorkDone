@@ -1,0 +1,9 @@
+/* Custom Scrollbar for the Sidebar */
+.clipped-div {
+  max-width: 390px;
+  width: 100%;
+  height: 397px;
+  background: #318991;
+  clip-path: path("M0 0H390V334.453C390 334.453 274.533 395.274 201.5 396.96C120.734 398.825 0 334.453 0 334.453V0Z");
+  -webkit-clip-path: path("M0 0H390V334.453C390 334.453 274.533 395.274 201.5 396.96C120.734 398.825 0 334.453 0 334.453V0Z");
+}
