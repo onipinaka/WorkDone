@@ -9,7 +9,7 @@ const CardInfo = [
 
 const Ordersection = () => {
   return (
-    <div className='flex flex-col gap-y-3 w-screen bg-white justify-center items-center py-3 relative'>
+    <div className='flex flex-col gap-y-3 w-full bg-white justify-center items-center py-3 relative'>
         <div className='absolute top-1/2 left-0 w-[261px] h-[261px] rounded-full bg-theme-circleyellow filter blur-[44.599998474121094px] opacity-20 transform -translate-x-1/2 -translate-y-1/2 z-[1]'></div>
         {CardInfo.map((item) => (
           <OrderCard key={item.headinglabel} imagepath={item.imagepath} headinglabel={item.headinglabel} description={item.description} />

@@ -7,18 +7,18 @@ import { useDispatch } from 'react-redux'
 import { Link } from 'react-router-dom'
 
 const sidebaritem = [ 
-    {label: "Discover", iconpath: "/Discover.svg", height: "", width: "", path: "/home"},
-    {label: "Wallet", iconpath: "/wallet.svg", path: "", height: "34px", width: "34px"},
-    {label: "My Orders", iconpath: "/MyOrder.svg", path: "", height: "28px", width: "28px"},
-    {label: "Create Task", iconpath: "/CreateTask.svg", path: "", height: "24px", width: "24px"},
-    {label: "Notification", iconpath: "/notification.svg", path: "", height: "27px", width: "27px"},
-    {label: "Profile", iconpath: "/profile.svg", path: "/profile", height: "20px", width: "20px"},
-    {label: "Settings", iconpath: "/settings.svg", path: "", height: "27px", width: "27px"},
-    {label: "About Us", iconpath: "/settings.svg", path: "/about", height: "27px", width: "27px"},
-    {label: "FAQs", iconpath: "/Discover.svg", path: "", height: "", width: ""},
-    {label: "Help and Feedback", iconpath: "/Discover.svg", path: "", height: "", width: ""},
-    {label: "Refer", iconpath: "/refer.svg", path: "", height: "18px", width: "20px"},
-    {label: "Logout", iconpath: "/logout.svg", path: "", height: "27px", width: "27px"},
+    {label: "Discover", iconpath: "/sidebar/discover.svg", path: "/home"},
+    {label: "Wallet", iconpath: "/sidebar/wallet.svg", path: ""},
+    {label: "My Orders", iconpath: "/sidebar/myorder.svg", path: ""},
+    {label: "Create Task", iconpath: "/sidebar/createorder.svg", path: ""},
+    {label: "Notification", iconpath: "/sidebar/notification.svg", path: ""},
+    {label: "Profile", iconpath: "/sidebar/profile.svg", path: "/profile"},
+    {label: "Settings", iconpath: "/sidebar/setting.svg", path: ""},
+    {label: "About Us", iconpath: "/sidebar/setting.svg", path: "/about"},
+    {label: "FAQs", iconpath: "/sidebar/setting.svg", path: ""},
+    {label: "Help and Feedback", iconpath: "/sidebar/setting.svg", path: ""},
+    {label: "Refer", iconpath: "/sidebar/refer.svg", path: ""},
+    {label: "Logout", iconpath: "/sidebar/logout.svg", path: ""},
 ]
 
 const username = "Vivek"
@@ -49,7 +49,7 @@ const Sidebar = () => {
                         if(islast){
                             return (
                                 <div key={item.label} className='mt-[20px]'>
-                                    <Sidebarbtn label={item.label} iconpath={item.iconpath} height={item.height} width={item.width} />
+                                    <Sidebarbtn label={item.label} iconpath={item.iconpath} />
                                 </div>
                             )
                         }
@@ -57,7 +57,7 @@ const Sidebar = () => {
                         return (
                             <div key={item.label} onClick={()=>(dispatch(closeSidebar()))}>
                                 <Link to={item.path}>
-                                    <Sidebarbtn label={item.label} iconpath={item.iconpath} height={item.height} width={item.width} />
+                                    <Sidebarbtn label={item.label} iconpath={item.iconpath} />
                                 </Link>
                             </div>
                         )
