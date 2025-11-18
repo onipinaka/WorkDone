@@ -18,7 +18,7 @@ const sidebaritem = [
     {label: "FAQs", iconpath: "/sidebar/setting.svg", path: ""},
     {label: "Help and Feedback", iconpath: "/sidebar/setting.svg", path: ""},
     {label: "Refer", iconpath: "/sidebar/refer.svg", path: ""},
-    {label: "Logout", iconpath: "/sidebar/logout.svg", path: ""},
+fixe    {label: "Logout", iconpath: "/sidebar/logout.svg", path: ""},
 ]
 
 const username = "Vivek"
