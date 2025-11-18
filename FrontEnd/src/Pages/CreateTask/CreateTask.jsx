@@ -5,7 +5,7 @@ const CreateTask = () => {
   const [isPublic, setIsPublic] = useState(false);
 
   return (
-    <div className="w-full max-w-screen-sm mx-auto bg-[#f2fbfa] min-h-screen px-4 pt-4 pb-24 text-[#026A75] font-poppins">
+    <div className="w-full max-w-screen-sm mx-auto bg-[#f2fbfa] min-h-screen px-4 pt-4 pb-12 text-[#026A75] font-poppins">
       <div className="flex flex-row mb-3 items-center justify-between">
         <p className="text-lg leading-none font-semibold mb-1">Complete your task</p>
         <p className="text-xs leading-none text-[#026A75]">step 1 of 4</p>
@@ -64,26 +64,50 @@ const CreateTask = () => {
           <h2 className="font-semibold text-lg ">Location</h2>
         </div>
 
-        <label className="block text-base text-[#026A75] mb-3 font-medium">From</label>
-        <input
-          type="text"
-          placeholder="Pickup Location"
-          className="w-full p-2 border border-gray-300 rounded-xl mb-4 text-sm"
-        />
+        <div className="mb-4">
+          <label className="flex items-center gap-2 text-base text-[#026A75] mb-3 font-medium">
+            <div className="w-8 h-8 bg-[#E7F7F7] rounded-full flex items-center justify-center">
+              <img src="/create-task/location.svg" alt="" className="w-5 h-5" />
+            </div>
+            From
+          </label>
+          <input
+            type="text"
+            placeholder="Pickup Location"
+            className="w-full p-3 border border-gray-300 rounded-xl text-sm"
+          />
+        </div>
 
-        <label className="block text-base text-[#026A75] mb-3 font-medium">To</label>
-        <input
-          type="text"
-          placeholder="Delivery Location"
-          className="w-full p-2 border border-gray-300 rounded-xl mb-4 text-sm"
-        />
+        <div className="mb-4">
+          <label className="flex items-center gap-2 text-base text-[#026A75] mb-3 font-medium">
+            <div className="w-8 h-8 bg-[#E7F7F7] rounded-full flex items-center justify-center">
+              <img src="/create-task/location.svg" alt="" className="w-5 h-5" />
+            </div>
+            To
+          </label>
+          <input
+            type="text"
+            placeholder="Delivery Location"
+            className="w-full p-3 border border-gray-300 rounded-xl text-sm"
+          />
+        </div>
 
-        <label className="block text-base text-[#026A75] mb-3 font-medium">Distance(km)</label>
-        <input
-          type="number"
-          placeholder="0.00 Km"
-          className="w-full p-2 border border-gray-300 rounded-xl mb-4 text-sm"
-        />
+        <div className="mb-4">
+          <label className="flex items-center gap-2 text-base text-[#026A75] mb-3 font-medium">
+            <div className="w-8 h-8 bg-[#E7F7F7] rounded-full flex items-center justify-center">
+              <img src="/create-task/mapicon.svg" alt="" className="w-5 h-5" />
+            </div>
+            Distance(km)
+          </label>
+          <div className="relative">
+            <input
+              type="number"
+              placeholder="0.00"
+              className="w-full p-3 pr-12 border border-gray-300 rounded-xl text-sm"
+            />
+            <span className="absolute right-4 top-1/2 -translate-y-1/2 text-gray-400 text-sm">Km</span>
+          </div>
+        </div>
 
         <div className="bg-gray-200 h-28 flex items-center justify-center text-gray-500 text-sm rounded-xl">
           Map will appear here
@@ -127,30 +151,34 @@ const CreateTask = () => {
         <div className="grid grid-cols-2 gap-4">
           <div>
             <label className="flex items-center gap-2 text-base font-medium text-[#026A75] mb-3">
-              <span>
-                {/* 📅 */}
-                </span>
+              <div className="w-8 h-8 bg-[#E7F7F7] rounded-full flex items-center justify-center">
+                <img src="/create-task/date.svg" alt="" className="w-4 h-4" />
+              </div>
               Date
             </label>
-            <input
-              type="text"
-              placeholder="dd-mm-yyyy"
-              className="w-full p-3 border border-gray-300 rounded-xl text-sm"
-            />
+            <div className="relative">
+              <input
+                type="date"
+                placeholder="dd-mm-yyyy"
+                className="w-full p-3 border border-gray-300 rounded-xl text-sm text-gray-500"
+              />
+            </div>
           </div>
           
           <div>
             <label className="flex items-center gap-2 text-base font-medium text-[#026A75] mb-3">
-              <span>
-                {/* icon */}
-              </span>
+              <div className="w-8 h-8 bg-[#E7F7F7] rounded-full flex items-center justify-center">
+                <img src="/create-task/time.svg" alt="" className="w-4 h-4" />
+              </div>
               Time
             </label>
-            <input
-              type="text"
-              placeholder="--:--"
-              className="w-full p-3 border border-gray-300 rounded-xl text-sm"
-            />
+            <div className="relative">
+              <input
+                type="time"
+                placeholder="--:--"
+                className="w-full p-3 border border-gray-300 rounded-xl text-sm text-gray-500"
+              />
+            </div>
           </div>
         </div>
       </section>
@@ -175,61 +203,81 @@ const CreateTask = () => {
         </div>
 
         <label className="block text-base text-[#026A75] mb-3 font-medium">Payment Method</label>
-        <div className="flex justify-between space-x-2 mb-4">
-          <button className="w-full border border-gray-300 rounded-xl p-2 text-sm">
-            Cash
+        <div className="flex justify-between gap-3 mb-4">
+          <button className="flex-1 flex flex-col items-center justify-center border border-gray-300 rounded-xl p-3 text-sm hover:bg-gray-50 transition-colors">
+            <div className="w-10 h-10 bg-[#E8F7F4] rounded-full flex items-center justify-center mb-2">
+              <img src="/create-task/cash.svg" alt="" className="w-4 h-4" />
+            </div>
+            <span>Cash</span>
           </button>
-          <button className="w-full border border-gray-300 rounded-xl p-2 text-sm">
-            Online
+          <button className="flex-1 flex flex-col items-center justify-center border border-gray-300 rounded-xl p-3 text-sm hover:bg-gray-50 transition-colors">
+            <div className="w-10 h-10 bg-[#E8F7F4] rounded-full flex items-center justify-center mb-2">
+              <img src="/create-task/online.svg" alt="" className="w-4 h-4" />
+            </div>
+            <span>Online</span>
           </button>
-          <button className="w-full border border-gray-300 rounded-xl p-2 text-sm">
-            Wallet
+          <button className="flex-1 flex flex-col items-center justify-center border border-gray-300 rounded-xl p-3 text-sm hover:bg-gray-50 transition-colors">
+            <div className="w-10 h-10 bg-[#E8F7F4] rounded-full flex items-center justify-center mb-2">
+              <img src="/create-task/wallet.svg" alt="" className="w-4 h-4" />
+            </div>
+            <span>Wallet</span>
           </button>
         </div>
 
         <label className="block text-base text-[#026A75] mb-3 font-medium">Task Availability</label>
-        <div className="flex items-center justify-between mb-3 bg-[#f2fbfa] p-3 rounded-xl">
-          <div>
-            <p className="text-sm font-semibold">Priority Task</p>
-            <p className="text-xs text-gray-500">Get more attention (+₹50)</p>
+        <div className="flex items-center justify-between mb-3 bg-[#E8F7F4] p-4 rounded-xl border border-[#026A75]/20">
+          <div className="flex items-center gap-3">
+            <div className="w-10 h-10 bg-[#E7F7F7] rounded-full flex items-center justify-center flex-shrink-0">
+              <img src="/create-task/i.svg" alt="" className="w-5 h-5" />
+            </div>
+            <div>
+              <p className="text-sm font-semibold text-[#026A75]">Priority Task</p>
+              <p className="text-xs text-gray-500">Get more attention (+₹50)</p>
+            </div>
           </div>
           <div 
             onClick={() => setPriority(!priority)}
             className={`relative inline-flex h-6 w-11 items-center rounded-full cursor-pointer transition-colors ${
-              priority ? 'bg-[#007965]' : 'bg-gray-300'
+              priority ? 'bg-[#026A75]' : 'bg-gray-400'
             }`}
           >
             <span
-              className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
+              className={`inline-block h-5 w-5 transform rounded-full bg-white transition-transform shadow-sm ${
                 priority ? 'translate-x-6' : 'translate-x-1'
               }`}
             />
           </div>
         </div>
 
-        <div className="flex items-center justify-between bg-[#f2fbfa] p-3 rounded-xl">
-          <div>
-            <p className="text-sm font-semibold">Public Task</p>
-            <p className="text-xs text-gray-500">Visible to all user</p>
+        <div className="flex items-center justify-between bg-[#E8F7F4] p-4 rounded-xl border border-[#026A75]/20">
+          <div className="flex items-center gap-3">
+            <div className="w-10 h-10 bg-[#E7F7F7] rounded-full flex items-center justify-center flex-shrink-0">
+              <img src="/create-task/i.svg" alt="" className="w-5 h-5" />
+            </div>
+            <div>
+              <p className="text-sm font-semibold text-[#026A75]">Public Task</p>
+              <p className="text-xs text-gray-500">Visible to all user</p>
+            </div>
           </div>
           <div 
             onClick={() => setIsPublic(!isPublic)}
             className={`relative inline-flex h-6 w-11 items-center rounded-full cursor-pointer transition-colors ${
-              isPublic ? 'bg-[#007965]' : 'bg-gray-300'
+              isPublic ? 'bg-[#026A75]' : 'bg-gray-400'
             }`}
           >
             <span
-              className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
+              className={`inline-block h-5 w-5 transform rounded-full bg-white transition-transform shadow-sm ${
                 isPublic ? 'translate-x-6' : 'translate-x-1'
               }`}
             />
           </div>
         </div>
       </section>
-
-      <button className="fixed bottom-4 left-4 right-4 bg-[#026A75] text-white py-3 rounded-xl font-semibold text-center shadow-lg">
-        Post Task
-      </button>
+      <div className=" w-full max-w-screen-sm bg-white border-t border-gray-200 p-4">
+        <button className="w-full bg-[#026A75] text-white py-3 rounded-xl font-semibold text-center shadow-lg hover:bg-[#025862] transition-colors">
+          Post Task
+        </button>
+      </div>
     </div>
   );
 };

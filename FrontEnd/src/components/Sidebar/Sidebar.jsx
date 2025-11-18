@@ -10,7 +10,7 @@ const sidebaritem = [
     {label: "Discover", iconpath: "/sidebar/discover.svg", path: "/home"},
     {label: "Wallet", iconpath: "/sidebar/wallet.svg", path: ""},
     {label: "My Orders", iconpath: "/sidebar/myorder.svg", path: ""},
-    {label: "Create Task", iconpath: "/sidebar/createorder.svg", path: ""},
+    {label: "Create Task", iconpath: "/sidebar/createorder.svg", path: "/create-task"},
     {label: "Notification", iconpath: "/sidebar/notification.svg", path: ""},
     {label: "Profile", iconpath: "/sidebar/profile.svg", path: "/profile"},
     {label: "Settings", iconpath: "/sidebar/setting.svg", path: ""},
