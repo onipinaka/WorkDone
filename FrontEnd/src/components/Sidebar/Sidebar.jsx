@@ -16,7 +16,7 @@ const sidebaritem = [
     {label: "Settings", iconpath: "/sidebar/setting.svg", path: ""},
     {label: "About Us", iconpath: "/sidebar/setting.svg", path: "/about"},
     {label: "FAQs", iconpath: "/sidebar/setting.svg", path: ""},
-    {label: "Help and Feedback", iconpath: "/sidebar/setting.svg", path: ""},
+    {label: "Help and Feedback", iconpath: "/sidebar/setting.svg", path: "/contact"},
     {label: "Refer", iconpath: "/sidebar/refer.svg", path: ""},
     {label: "Logout", iconpath: "/sidebar/logout.svg", path: ""},
 ]
